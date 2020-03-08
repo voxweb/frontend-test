@@ -168,6 +168,12 @@
 }
 
 @include mobile {
+  .select {
+    &.is-open {
+      width: auto;
+    }
+  }
+
   .select__button {
     height: 40px;
 

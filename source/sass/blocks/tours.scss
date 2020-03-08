@@ -1,0 +1,49 @@
+.tours {
+  margin-bottom: 12px;
+  padding-top: 46px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 47px;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.tours__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tours__item {
+  width: 48.71%;
+  margin-bottom: 51px;
+}
+
+@include mobile {
+  .tours {
+    margin-bottom: 31px;
+    padding-top: 32px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .tours__list {
+    flex-direction: column;
+    padding-top: 30px;
+    border-top: 2px solid $color-silver;
+    border-bottom: 2px solid $color-silver;
+  }
+
+  .tours__item {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+}
