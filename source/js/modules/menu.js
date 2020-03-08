@@ -4,6 +4,7 @@
   const ESC_KEYCODE = 27;
   const header = document.querySelector('.site-header');
   const burger = document.querySelector('.js-burger');
+  const menu = document.querySelector('.js-menu');
   const selects = document.querySelectorAll('.js-select');
   const datePicker = document.querySelector('.js-date-picker input');
   const overlay = document.querySelector('.js-overlay');
@@ -65,6 +66,7 @@
     header.classList.add('menu-opened');
     document.body.classList.add('modal-opened');
     document.addEventListener('keydown', onDocumentEscPress);
+    menu.addEventListener('scroll', onMenuScroll);
   }
 
   function closeMenu() {
@@ -73,6 +75,7 @@
     header.classList.remove('menu-opened');
     document.body.classList.remove('modal-opened');
     document.removeEventListener('keydown', onDocumentEscPress);
+    menu.removeEventListener('scroll', onMenuScroll);
   }
 
   function closeDropdowns() {
@@ -90,6 +93,11 @@
     if (evt.keyCode === ESC_KEYCODE) {
       closeMenu();
     }
+  }
+
+  function onMenuScroll() {
+    let top = datePicker.getBoundingClientRect().top + datePicker.getBoundingClientRect().height;
+    customDatePicker.picker.style.top = `${top}px`;
   }
 
   if (selects.length) {
