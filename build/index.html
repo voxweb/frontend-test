@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.">
+    <title>Экскурсионные туры</title>
+    <link rel="preload" href="fonts/MuseoSansCyrl_100.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MuseoSansCyrl_300.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MuseoSansCyrl_500.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MuseoSansCyrl_700.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MuseoSansCyrl_900.otf" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__container">
+        <button class="site-header__burger js-burger" type="button" aria-label="Открыть меню"><span></span><span></span><span></span><span></span></button>
+      </div>
+      <div class="site-header__menu">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <div class="site-header__selects-container">
+            <div class="site-header__countries-select select js-select">
+              <input class="visually-hidden" type="text" name="countries">
+              <button class="select__button" type="button" aria-label="Раскрыть список">Страны</button>
+              <ul class="select__list" data-simplebar data-simplebar-auto-hide="false">
+                <li class="select__item"><span class="select__sublist-title js-open-select-sublist">Южная Америка</span>
+                  <ul class="select__sublist">
+                    <li class="select__subitem"><span class="select__value js-select-value">Аргентина</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Бразилия</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Перу</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Уругвай</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Чили</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Эквадор</span></li>
+                    <li class="select__subitem select__all-subitem"><span class="select__value js-select-all-value" data-value="Южная Америка">Bсе туры на континенте</span></li>
+                  </ul>
+                </li>
+                <li class="select__item"><span class="select__sublist-title js-open-select-sublist">Северная Америка</span>
+                  <ul class="select__sublist">
+                    <li class="select__subitem"><span class="select__value js-select-value">Канада</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Куба</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Мексика</span></li>
+                    <li class="select__subitem select__all-subitem"><span class="select__value js-select-all-value" data-value="Северная Америка">Bсе туры на континенте</span></li>
+                  </ul>
+                </li>
+                <li class="select__item"><span class="select__sublist-title js-select-value">Арктика и Антарктика</span></li>
+                <li class="select__item"><span class="select__sublist-title js-open-select-sublist">Африка</span>
+                  <ul class="select__sublist">
+                    <li class="select__subitem"><span class="select__value js-select-value">Египет</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Марокко</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Танзания</span></li>
+                    <li class="select__subitem select__all-subitem"><span class="select__value js-select-all-value" data-value="Африка">Bсе туры на континенте</span></li>
+                  </ul>
+                </li>
+                <li class="select__item"><span class="select__sublist-title js-select-value">Австралия и Океания</span></li>
+                <li class="select__item"><span class="select__sublist-title js-open-select-sublist">Европа</span>
+                  <ul class="select__sublist">
+                    <li class="select__subitem"><span class="select__value js-select-value">Германия</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Нидерланды</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Франция</span></li>
+                    <li class="select__subitem select__all-subitem"><span class="select__value js-select-all-value" data-value="Европа">Bсе туры на континенте</span></li>
+                  </ul>
+                </li>
+                <li class="select__item"><span class="select__sublist-title js-select-value">Россия</span></li>
+                <li class="select__item"><span class="select__sublist-title js-open-select-sublist">Азия</span>
+                  <ul class="select__sublist">
+                    <li class="select__subitem"><span class="select__value js-select-value">Таиланд</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Филиппины</span></li>
+                    <li class="select__subitem"><span class="select__value js-select-value">Камбоджа</span></li>
+                    <li class="select__subitem select__all-subitem"><span class="select__value js-select-all-value" data-value="Азия">Bсе туры на континенте</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="site-header__date-picker select js-date-picker">
+              <input class="select__date-picker" type="text" name="dates" placeholder="Даты">
+            </div>
+          </div>
+          <div class="site-header__travel-type-select select js-select">
+            <input class="visually-hidden" type="text" name="travel-type">
+            <button class="select__button" type="button" aria-label="Раскрыть список">Тип путешествия</button>
+            <ul class="select__list" data-simplebar data-simplebar-auto-hide="false">
+              <li class="select__item"><span class="select__value js-select-value">Активный</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Майские</span></li>
+              <li class="select__item"><span class="select__value js-select-value">На авто</span></li>
+              <li class="select__item"><span class="select__value js-select-value">На корабле</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Новый год</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Поход</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Серфинг</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Эксклюзив</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Экскурсионный</span></li>
+              <li class="select__item"><span class="select__value js-select-value">Экспедиция</span></li>
+            </ul>
+          </div>
+          <button class="site-header__btn" type="submit">Найти</button>
+        </form>
+        <nav class="site-header__navigation">
+          <ul class="site-header__navigation-list">
+            <li class="site-header__navigation-item"><a href="#">Путешествия</a></li>
+            <li class="site-header__navigation-item"><a href="#">О нас</a></li>
+            <li class="site-header__navigation-item"><a href="#">Отзывы</a></li>
+            <li class="site-header__navigation-item"><a href="#">Блог</a></li>
+          </ul>
+        </nav><a class="site-header__tel" href="tel:+74951234567">+7 (495) 123-45-67</a><a class="site-header__btn" href="#">Подберите мне тур</a>
+      </div>
+      <div class="site-header__overlay js-overlay"></div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Экскурсионные туры</h1>
+      <div class="container">
+        <section class="tours">
+          <h2>Зимбабве</h2>
+          <ul class="tours__list">
+            <li class="tours__item tour"><a class="tour__link" href="#">
+                <div class="tour__image"><img src="img/tour-1@1x.jpg" srcset="img/tour-1@2x.jpg 2x" width="380" height="218" alt="Италия"><span>от 118 112 &#8381;</span></div><span>Италия</span>
+                <h3>Под небом Тосканы</h3>
+                <p>Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари&nbsp;—&nbsp;Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                <div class="tour__description"><span>8 дней / 7 ночей</span><span>Русский язык</span>
+                  <p><span>27.04.19</span> - <span>04.05.19</span> <span>и еще 15 дат</span></p>
+                </div>
+                <div class="tour__special-offer"><span>Авиаперелет включен!</span></div></a></li>
+            <li class="tours__item tour"><a class="tour__link" href="#">
+                <div class="tour__image"><img src="img/tour-2@1x.jpg" srcset="img/tour-2@2x.jpg 2x" width="380" height="218" alt="Исландия"><span>140 715 &#8381;</span></div><span>Исландия</span>
+                <h3>Майские каникулы в Исландии</h3>
+                <p>Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi&nbsp;—&nbsp;Рейкьявик</p>
+                <div class="tour__description"><span>8 дней / 7 ночей</span><span>Русский язык</span>
+                  <p><span>27.04.19</span> - <span>04.05.19</span></p>
+                </div></a></li>
+            <li class="tours__item tour"><a class="tour__link" href="#">
+                <div class="tour__image"><img src="img/tour-3@1x.jpg" srcset="img/tour-3@2x.jpg 2x" width="380" height="218" alt="Турция"><span>37 302 &#8381;</span></div><span>Турция</span>
+                <h3>Открытие Турции</h3>
+                <p>Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы —&nbsp;Пергам — Ассос — Троя — Стамбул</p>
+                <div class="tour__description"><span>8 дней / 7 ночей</span><span>Русский язык</span>
+                  <p><span>28.04.19</span> - <span>05.05.19</span> <span>и еще 3 даты</span></p>
+                </div></a></li>
+            <li class="tours__item tour"><a class="tour__link" href="#">
+                <div class="tour__image"><img src="img/tour-4@1x.jpg" srcset="img/tour-4@2x.jpg 2x" width="380" height="218" alt="Норвегия, Шпицберген"><span>145 000 &#8381;</span></div><span>Норвегия, Шпицберген</span>
+                <h3>От Свальбарда до Груманта</h3>
+                <div class="tour__description"><span>8 дней / 7 ночей</span><span>Русский язык</span>
+                  <p><span>27.04.19</span> - <span>04.05.19</span> <span>и еще 15 дат</span></p>
+                </div>
+                <div class="tour__special-offer"><span>Гарантированный тур!</span></div></a></li>
+          </ul>
+        </section>
+        <section class="request">
+          <h2>Заявка на подбор путешествия</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <legend>Немного о вас</legend>
+              <div class="request__form-row">
+                <div class="request__form-group">
+                  <label for="name">Имя <span>*</span></label>
+                  <input type="text" name="name" id="name" required><span class="request__error-message">Укажите имя</span>
+                </div>
+                <div class="request__form-group js-tel">
+                  <label for="tel-number">Телефон</label>
+                  <input type="tel" name="tel-number" id="tel-number" placeholder="+7___ ___ __ __">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>О путешествии</legend>
+              <div class="request__form-row">
+                <div class="request__form-group">
+                  <label for="destination">Куда и когда хотите поехать? <span>*</span></label>
+                  <input type="text" name="destination" id="destination" placeholder="Континент, страна или город" required><span class="request__error-message">Укажите континет, страну или город</span>
+                </div>
+                <div class="request__form-group">
+                  <label for="dates">Когда?</label>
+                  <input type="text" name="dates" id="dates" placeholder="Даты или временной интервал">
+                </div>
+              </div>
+            </fieldset>
+            <div class="request__checkbox-container">
+              <fieldset>
+                <legend>Удобный способ связи</legend>
+                <ul class="request__checkbox-list">
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="viber" id="viber">
+                    <label for="viber">Viber</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="whatsapp" id="whatsapp">
+                    <label for="whatsapp">Whatsapp</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="email" id="email">
+                    <label for="email">Почта</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="tel" id="tel">
+                    <label for="tel">Телефон</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Откуда узнали о нас</legend>
+                <ul class="request__checkbox-list">
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="internet" id="internet">
+                    <label for="internet">Интернет</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="friends" id="friends">
+                    <label for="friends">Рекомендовали друзья</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="social-networks" id="social-networks">
+                    <label for="social-networks">Соц. сети</label>
+                  </li>
+                  <li class="request__checkbox-item">
+                    <input type="checkbox" name="already-traveled" id="already-traveled">
+                    <label for="already-traveled">Уже ездил</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="request__agreement">
+              <input type="checkbox" name="email-offers" id="email-offers">
+              <label for="email-offers">Получать свежие предложения по электронной почте</label>
+              <p>Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.</p>
+            </div>
+            <div class="request__agreement">
+              <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
+              <label for="privacy-policy">С обработкой своих персональных данных согласен. <span>*</span></label>
+              <p>Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
+            </div>
+            <p class="request__footnote"><span>*</span> Поля, которые надо обязательно заполнить</p>
+            <button type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"></footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

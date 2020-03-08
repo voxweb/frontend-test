@@ -1,0 +1,72 @@
+section.request
+  h2 Заявка на подбор путешествия
+
+  form(action="https://echo.htmlacademy.ru" method="post")
+    fieldset
+      legend Немного о вас
+      .request__form-row
+        .request__form-group
+          label(for="name") Имя <span>*</span>
+          input(type="text" name="name" id="name" required)
+          span.request__error-message Укажите имя
+        .request__form-group.js-tel
+          label(for="tel-number") Телефон
+          input(type="tel" name="tel-number" id="tel-number" placeholder="+7___ ___ __ __")
+
+    fieldset
+      legend О путешествии
+      .request__form-row
+        .request__form-group
+          label(for="destination") Куда и когда хотите поехать? <span>*</span>
+          input(type="text" name="destination" id="destination" placeholder="Континент, страна или город" required)
+          span.request__error-message Укажите континет, страну или город
+        .request__form-group
+          label(for="dates") Когда?
+          input(type="text" name="dates" id="dates" placeholder="Даты или временной интервал")
+
+    .request__checkbox-container
+      fieldset
+        legend Удобный способ связи
+        ul.request__checkbox-list
+          li.request__checkbox-item
+            input(type="checkbox" name="viber" id="viber")
+            label(for="viber") Viber
+          li.request__checkbox-item
+            input(type="checkbox" name="whatsapp" id="whatsapp")
+            label(for="whatsapp") Whatsapp
+          li.request__checkbox-item
+            input(type="checkbox" name="email" id="email")
+            label(for="email") Почта
+          li.request__checkbox-item
+            input(type="checkbox" name="tel" id="tel")
+            label(for="tel") Телефон
+
+      fieldset
+        legend Откуда узнали о нас
+        ul.request__checkbox-list
+          li.request__checkbox-item
+            input(type="checkbox" name="internet" id="internet")
+            label(for="internet") Интернет
+          li.request__checkbox-item
+            input(type="checkbox" name="friends" id="friends")
+            label(for="friends") Рекомендовали друзья
+          li.request__checkbox-item
+            input(type="checkbox" name="social-networks" id="social-networks")
+            label(for="social-networks") Соц. сети
+          li.request__checkbox-item
+            input(type="checkbox" name="already-traveled" id="already-traveled")
+            label(for="already-traveled") Уже ездил
+
+    .request__agreement
+      input(type="checkbox" name="email-offers" id="email-offers")
+      label(for="email-offers") Получать свежие предложения по электронной почте
+      p Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+
+    .request__agreement
+      input(type="checkbox" name="privacy-policy" id="privacy-policy" required)
+      label(for="privacy-policy") С обработкой своих персональных данных согласен. <span>*</span>
+      p Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+
+    p.request__footnote <span>*</span> Поля, которые надо обязательно заполнить
+
+    button(type="submit") Отправить

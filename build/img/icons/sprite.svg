@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 5 9">
+<path d="M1.14286 8L4 4.58537L1 1" stroke="black"/>
+</symbol><symbol id="check" viewBox="0 0 19 11">
+<path d="M1 2.33333L9.29268 9L18 2" stroke="#FFD241" stroke-width="3"/>
+</symbol><symbol id="ellipse" viewBox="0 0 28 28">
+<circle cx="14" cy="14" r="14" fill="#FFD241"/>
+</symbol></svg>

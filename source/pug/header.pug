@@ -1,0 +1,136 @@
+header.site-header
+  .site-header__container
+    button.site-header__burger.js-burger(type="button" aria-label="Открыть меню")
+      span
+      span
+      span
+      span
+
+  .site-header__menu
+    form(action="https://echo.htmlacademy.ru" method="get")
+      .site-header__selects-container
+        .site-header__countries-select.select.js-select
+          input.visually-hidden(type="text" name="countries")
+          button.select__button(type="button" aria-label="Раскрыть список") Страны
+          ul.select__list(data-simplebar data-simplebar-auto-hide="false")
+            li.select__item
+              span.select__sublist-title.js-open-select-sublist Южная Америка
+              ul.select__sublist
+                li.select__subitem
+                  span.select__value.js-select-value Аргентина
+                li.select__subitem
+                  span.select__value.js-select-value Бразилия
+                li.select__subitem
+                  span.select__value.js-select-value Перу
+                li.select__subitem
+                  span.select__value.js-select-value Уругвай
+                li.select__subitem
+                  span.select__value.js-select-value Чили
+                li.select__subitem
+                  span.select__value.js-select-value Эквадор
+                li.select__subitem.select__all-subitem
+                  span.select__value.js-select-all-value(data-value="Южная Америка") Bсе туры на континенте
+
+            li.select__item
+              span.select__sublist-title.js-open-select-sublist Северная Америка
+              ul.select__sublist
+                li.select__subitem
+                  span.select__value.js-select-value Канада
+                li.select__subitem
+                  span.select__value.js-select-value Куба
+                li.select__subitem
+                  span.select__value.js-select-value Мексика
+                li.select__subitem.select__all-subitem
+                  span.select__value.js-select-all-value(data-value="Северная Америка") Bсе туры на континенте
+
+            li.select__item
+              span.select__sublist-title.js-select-value Арктика и Антарктика
+
+            li.select__item
+              span.select__sublist-title.js-open-select-sublist Африка
+              ul.select__sublist
+                li.select__subitem
+                  span.select__value.js-select-value Египет
+                li.select__subitem
+                  span.select__value.js-select-value Марокко
+                li.select__subitem
+                  span.select__value.js-select-value Танзания
+                li.select__subitem.select__all-subitem
+                  span.select__value.js-select-all-value(data-value="Африка") Bсе туры на континенте
+
+            li.select__item
+              span.select__sublist-title.js-select-value Австралия и Океания
+
+            li.select__item
+              span.select__sublist-title.js-open-select-sublist Европа
+              ul.select__sublist
+                li.select__subitem
+                  span.select__value.js-select-value Германия
+                li.select__subitem
+                  span.select__value.js-select-value Нидерланды
+                li.select__subitem
+                  span.select__value.js-select-value Франция
+                li.select__subitem.select__all-subitem
+                  span.select__value.js-select-all-value(data-value="Европа") Bсе туры на континенте
+
+            li.select__item
+              span.select__sublist-title.js-select-value Россия
+
+            li.select__item
+              span.select__sublist-title.js-open-select-sublist Азия
+              ul.select__sublist
+                li.select__subitem
+                  span.select__value.js-select-value Таиланд
+                li.select__subitem
+                  span.select__value.js-select-value Филиппины
+                li.select__subitem
+                  span.select__value.js-select-value Камбоджа
+                li.select__subitem.select__all-subitem
+                  span.select__value.js-select-all-value(data-value="Азия") Bсе туры на континенте
+
+        .site-header__date-picker.select.js-date-picker
+          input.select__date-picker(type="text" name="dates" placeholder="Даты")
+
+      .site-header__travel-type-select.select.js-select
+        input.visually-hidden(type="text" name="travel-type")
+        button.select__button(type="button" aria-label="Раскрыть список") Тип путешествия
+        ul.select__list(data-simplebar data-simplebar-auto-hide="false")
+          li.select__item
+            span.select__value.js-select-value Активный
+          li.select__item
+            span.select__value.js-select-value Майские
+          li.select__item
+            span.select__value.js-select-value На авто
+          li.select__item
+            span.select__value.js-select-value На корабле
+          li.select__item
+            span.select__value.js-select-value Новый год
+          li.select__item
+            span.select__value.js-select-value Поход
+          li.select__item
+            span.select__value.js-select-value Серфинг
+          li.select__item
+            span.select__value.js-select-value Эксклюзив
+          li.select__item
+            span.select__value.js-select-value Экскурсионный
+          li.select__item
+            span.select__value.js-select-value Экспедиция
+
+      button.site-header__btn(type="submit") Найти
+
+    nav.site-header__navigation
+      ul.site-header__navigation-list
+        li.site-header__navigation-item
+          a(href="#") Путешествия
+        li.site-header__navigation-item
+          a(href="#") О нас
+        li.site-header__navigation-item
+          a(href="#") Отзывы
+        li.site-header__navigation-item
+          a(href="#") Блог
+
+    a.site-header__tel(href="tel:+74951234567") +7 (495) 123-45-67
+
+    a.site-header__btn(href="#") Подберите мне тур
+
+  .site-header__overlay.js-overlay

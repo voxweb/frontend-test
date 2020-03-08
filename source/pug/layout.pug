@@ -1,0 +1,24 @@
+block variables
+include mixins.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.")
+    title #{page.title}
+    link(rel="preload" href="fonts/MuseoSansCyrl_100.otf" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/MuseoSansCyrl_300.otf" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/MuseoSansCyrl_500.otf" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/MuseoSansCyrl_700.otf" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/MuseoSansCyrl_900.otf" as="font" crossorigin="anonymous")
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body
+    include header.pug
+    main
+      block content
+    include footer.pug
+
+    script(src='js/script.min.js')

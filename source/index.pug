@@ -1,0 +1,14 @@
+extends pug/layout.pug
+
+block variables
+  -
+    var page = {
+      title: 'Экскурсионные туры',
+      name: 'index'
+    };
+
+block content
+  h1.visually-hidden Экскурсионные туры
+  .container
+    include pug/blocks/tours.pug
+    include pug/blocks/request.pug

@@ -1,0 +1,12 @@
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@include mobile {
+  .container {
+    padding-right: 17px;
+    padding-left: 18px;
+  }
+}
